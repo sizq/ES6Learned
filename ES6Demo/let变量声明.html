@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>let 变量声明</title>
+</head>
+<body>
+    <script>
+        //1.let生命变量的格式
+        let a;
+        let b,c,d;
+        let e = 200;
+        let f = 521,g = "i-Spring",h = [];
+
+        //使用let声明的变量，不可以重复声明
+        let star = "罗志祥";
+        // let star = "小猪";
+
+        //2.块级作用域
+        // {
+        //     let girl = "周扬青";
+        //     var boy = "xiaozhu";
+        // }
+        // console.log(girl);
+        // console.log(boy);
+
+        //3.使用let声明的标量,不存在标量提升 
+        //  console.log(song);
+        //  let song = "恋爱达人";
+
+         //4.使用let声明的标量,不影响作用域链
+         {
+            let company = "i-Spring";
+            function fn(){
+                console.log(company);
+            }
+            fn();
+         }
+    </script>
+</body>
+</html>

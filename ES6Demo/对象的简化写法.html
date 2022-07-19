@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象的简化写法</title>
+</head>
+<body>
+    <script>
+        //ES6允许在大括号里边,直接写入变量和函数,作为对象的属性和方法
+        //为了代码更加简洁
+        let com_name = '腾讯';
+        let target = function (){
+            console.log('坑小学生');
+        };
+        let company = {
+            com_name,
+            target,
+            imporve(){
+                console.log('想着办法掏空你的钱包...');
+            }
+        };
+        console.log(company);
+        console.log(company.com_name);
+        company.target();
+        company.imporve();
+    </script>
+</body>
+</html>

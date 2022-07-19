@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数参数默认值</title>
+</head>
+<body>
+    <script>
+        //ES6中允许给函数的参数赋初始值  形参
+        //1.形参的初始值,具有默认值得参数,一般位置要靠后
+        // let add = (a,b,c) => a + b + c;
+        let add = (a,b,c=10) => a + b + c;
+        
+        let result = add(1,2,3);
+        // let result = add(1,2); //1+2+undefind=NaN
+        // console.log(result);
+
+        //2.可以与解构赋值结合使用
+        // function options({host,username,password,port}){
+        let options = ({host='127.0.0.1',username,password,port}) =>{
+            console.log(host)
+            console.log(username)
+            console.log(password)
+            console.log(port)
+        }
+
+        options({
+            // host:'localhost',
+            username:'root',
+            password:'root',
+            port:'8080'
+        });
+
+
+    </script>
+</body>
+</html>

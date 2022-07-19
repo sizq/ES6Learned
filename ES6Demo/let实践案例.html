@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let 实践案例</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="page-header">点击切换颜色</h2>
+        <!-- css渲染item -->
+        <div class="item">点我1</div>
+        <div class="item">点我2</div>
+        <div class="item">点我3</div>
+    </div>
+    <script>
+        //1.获取div元素对象
+        let item = document.getElementsByClassName('item');
+        //2.便利并绑定事件 var i  let i
+        for(let i = 0;i < item.length;i++){
+            item[i].onclick = function(){
+                //修改当前div背景颜色
+                // this.style.background = 'pink';
+                item[i].style.background = 'pink';
+            }
+        }
+    </script>
+    <style>
+        .item{
+                border:1px;
+                border-style:solid;
+                float: left;
+                width: 50px;
+                height: 50px;
+                margin: 3px;
+            }
+    </style>
+    
+</body>
+</html>

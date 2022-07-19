@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>const 声明常量以及特点</title>
+</head>
+<body>
+    <script>
+        //常量:值不能修改的量
+        //声明常量
+        const COMPANY = 'i-Spring';
+        
+        //1.一定要赋初始值
+        // const A ;
+
+        //2.一般情况下,常量使用大写
+        // const NUM = 100;
+
+        //3.常量的值不允许修改
+        // COMPANY = 100;
+
+        //4.块级作用域
+        // {
+        //     const PLAYER = 'UZI';
+        // }
+        // console.log(PLAYER);
+
+        //5.对于数组或对象元素的修改,不算做对常量的修改,不会报错
+        const XIYOUJI = ['猪八戒','唐僧','孙悟空'];
+        XIYOUJI.push('沙僧');
+        console.log(XIYOUJI);
+
+        // XIYOUJI = 100;
+
+
+    </script>
+</body>
+</html>
